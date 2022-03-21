@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Number</title>
+</head>
+<body>
+    <h1>Number:</h1>
+    <ul th:each="resultNumber : ${setNumbers}">
+        <li th:text="${resultNumber}"></li>
+        <img th:src="@{${'/images/number' + resultNumber + '.jpg'}}" width=200 height=400/>
+
+    </ul>
+
+    <a href="/generateForm"><h1>Submit another number</h1></a>
+</body>
+</html>
